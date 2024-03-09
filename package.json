@@ -1,0 +1,49 @@
+{
+  "name": "lt-surge-tink",
+  "version": "1.0.0",
+  "description": "A collection of connect middleware to mimic to Harp/Surge serving behaviour",
+  "repository": "https://github.com/garesbil9/lt-surge-tink.git",
+  "main": "index.js",
+  "scripts": {
+    "test": "xo && nyc ava",
+    "coveralls": "nyc report --reporter=text-lcov | coveralls",
+    "prettier": "prettier --single-quote --trailing-comma=es5 --bracket-spacing --tab-width 4 --write ./index.js `find ./test -name '*.js'` `find ./lib -name '*.js'` `find ./layers -name '*.js'`"
+  },
+  "xo": {
+    "extends": "prettier",
+    "rules": {
+      "no-var": 0,
+      "ava/prefer-async-await": 0,
+      "prefer-arrow-callback": 0,
+      "func-names": 0,
+      "object-shorthand": 0
+    }
+  },
+  "keywords": [
+    "local",
+    "surge",
+    "server"
+  ],
+  "author": "garesbil9",
+  "license": "MIT",
+  "dependencies": {
+    "escape-html": "1.0.3",
+    "lodash": "4.17.5",
+    "mime": "1.4.1",
+    "parseurl": "1.3.1",
+    "pause": "0.1.0",
+    "send": "0.16.0"
+  },
+  "devDependencies": {
+    "ava": "^0.20.0",
+    "connect": "3.6.0",
+    "coveralls": "2.11.16",
+    "eslint-config-prettier": "^2.2.0",
+    "fn-name": "2.0.1",
+    "get-port": "3.0.0",
+    "node-fetch": "1.6.3",
+    "nyc": "^11.0.3",
+    "prettier": "^1.5.2",
+    "xo": "^0.18.2"
+  }
+}
